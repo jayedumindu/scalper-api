@@ -9,6 +9,17 @@ from _binance import generate_realtime_candlestick_data
 
 app = FastAPI()
 
+# Allow all origins (replace "*" with the specific origins you want to allow)
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 symbol = 'ETHUSDT'  # Replace with your desired trading pair
 interval = '1m'    # Replace with your desired time interval
 contract = 'PERPETUAL'

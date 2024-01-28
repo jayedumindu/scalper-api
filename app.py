@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from joblib import load
 import pandas as pd
 from typing import Optional
-
+from fastapi.middleware.cors import CORSMiddleware
 from _binance import generate_realtime_candlestick_data
 
 app = FastAPI()

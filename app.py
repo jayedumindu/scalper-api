@@ -10,7 +10,9 @@ from _binance import generate_realtime_candlestick_data
 app = FastAPI()
 
 # Allow all origins (replace "*" with the specific origins you want to allow)
-origins = ["https://ml-react.onrender.com/","*"]
+origins = [
+    "https://ml-react.onrender.com"
+   ]
 
 app.add_middleware(
     CORSMiddleware,
@@ -18,6 +20,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"]
 )
 
 symbol = 'ETHUSDT'  # Replace with your desired trading pair

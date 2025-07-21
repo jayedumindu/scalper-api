@@ -11,8 +11,8 @@ import time
 import traceback
 import csv
 
-api_key='18abadde0f5683e7334844c452bdcbdcd516b76bef5d9e308b5226cb25386056'
-api_secret='96208bcf396a55548364510de2363b6e0aa18a8ab052ec013761012b954cffa4'
+api_key='key'
+api_secret='secret'
 
 # Initialize the Binance client
 # Use testnet=True for testing
